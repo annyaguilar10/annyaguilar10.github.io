@@ -32,6 +32,7 @@
   <p>Hi! I'm Stitch, i'm a Disney character. Say hello!</p>
 	  <input id="Name" placeholder="Your name">
   <input type="email" id="Email" placeholder ="Your email">
+	<input id="color" placeholder ="favorite color">
   <input type="submit" id="submit">
 </body>
 
@@ -60,6 +61,8 @@
 
 const Name = document.querySelector("#Name") 
 const Email = document.querySelector("#Email")
+const color = document.querySelector("#color")
+	
 document.querySelector('#submit').addEventListener('click', Submit)
 	
 	function Submit() {
@@ -68,10 +71,12 @@ document.querySelector('#submit').addEventListener('click', Submit)
 	  set(ref(db, timestamp), {
 		  Name: Name.value,
 	      email: Email.value,
+			color: color.value,
 	  });
 
 	  Name.value = ""
 	  Email.value = ""
+		color.value = ""
 	}
 	
 	function buildTimestamp() {
