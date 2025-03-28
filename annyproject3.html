@@ -11,7 +11,7 @@ body {
 }
 div {
   height: 300px;
-  background-size: cover;
+  background-size: 100% 100%;
   position: relative;
   margin: 40px 0 0 0;
   border-radius: 78px;
@@ -69,6 +69,14 @@ small {
 .dessert{
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-tR3rqoXcB5r1Dm4U1jHm4gempjnWD2cajS_xLBA-A_ijoZe_3RG4UikwAbPMZCQLrF4&usqp=CAU);
 }
+.last{
+  background-image: url(https://ih1.redbubble.net/image.2677993165.2297/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg);
+}
+
+
+
+
+
 .price {
   float: right;
 }
@@ -124,6 +132,13 @@ font-size: 22px;
   <small>Lollipop tart cotton candy jelly-o carrot cake apple pie cupcake. Jelly-o bear claw ice cream candy canes.</small></p>
 </div>
 
+
+<div class="last">
+	<input type="number" min="0" style="width: 50px" class="quantities">
+  <p>Tacos <span class="price">$7</span><br />
+  <small>Tri-tip capicola kielbasa salami brisket chicken rump strip steak drumstick. Meatloaf chuck boudin ribeye pork jowl. Andouille bacon jowl meatloaf pork loin prosciutto bresaola.</small></p>
+</div>
+
 <script>
   $('div').on('click', function() {
       $(this).toggleClass('show-description');
@@ -169,7 +184,7 @@ font-size: 22px;
   const Email = document.querySelector("#Email")
   document.querySelector('#submit').addEventListener('click', Submit)
   const quantities = document.querySelectorAll(".quantities") 
-  const itemsList = ["Enchiladas", "Crazy corn", "Churros"]
+  const itemsList = ["Enchiladas", "Crazy corn", "Churros", "Tacos"]
   const prices = document.querySelectorAll(".price") 
 	
 	
